@@ -1,9 +1,7 @@
-// src/screens/LoginScreen.js
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-
-const LoginScreen = ({ navigation }) => {
+const SignupScreen = ({navigation}) =>{
     // State สำหรับจัดการข้อมูล username และ password
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -19,9 +17,8 @@ const LoginScreen = ({ navigation }) => {
         }
     };
 
-    return (
+    return(
         <View style={styles.container}>
-            {/* <Text style={styles.title}>Login</Text>
             <TextInput
                 style={styles.input}
                 placeholder="Username"
@@ -39,31 +36,9 @@ const LoginScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-                <Text style={styles.signupText}>Don't have an account? Sign up</Text>
-            </TouchableOpacity> */}
-            <Text style={{color:'#F9FCFE', width:'90%', fontSize:96}}>
-                Hello
-            </Text>
-            <Text style={{color:'#F9FCFE', width:'90%', fontSize:16}}>
-                ยินดีต้อนรับ
-            </Text>
-            <Image 
-                source={require('E:/React Native/OWL/assets/logo.png')}
-                style={{marginBottom: 30}}
-            />
-            <TouchableOpacity style={styles.buttonSignUp} onPress={() => navigation.navigate('Signup')}>
-                <Text style={styles.buttonTextSignUp}>Sign up</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonSignUp}>
-                <Text style={styles.buttonTextSignUp}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-                <Text style={{fontSize: 16, color: '#E2F397'}}>ยินดีต้อนรับ</Text>
-            </TouchableOpacity>
         </View>
-    );
-};
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -99,22 +74,6 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
     },
-    signupText: {
-        color: '#007bff',
-        marginTop: 10,
-    },
-    buttonSignUp: {
-        width: '90%',
-        alignItems: 'center',
-        padding: 10,
-        backgroundColor: '#E2F397',
-        borderRadius: 30,
-        marginBottom: 45
-    },
-    buttonTextSignUp: {
-        color: '#274B57',
-        fontSize: 24
-    }
-});
+})
 
-export default LoginScreen;
+export default SignupScreen;
